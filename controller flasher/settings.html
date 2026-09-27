@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+<script src="commands.js"></script>
+<script src="ble.js"></script>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <div class="title">FLASHER CONTROLLER</div>
+
+  <div class="card">
+
+    <div class="tabs">
+      <a class="tab" href="index.html">Flasher</a>
+      <a class="tab active">Settings</a>
+    </div>
+
+
+    <div class="sectionTitle">
+      Pengaturan Bluetooth
+    </div>
+
+
+    <div class="speedBox">
+
+      <div class="speedTop">
+        <span>Status Bluetooth</span>
+        <span id="bleStatus">
+          Disconnected
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="speedBox">
+
+      <label>
+        Nama Device ESP32
+      </label>
+
+      <input 
+      class="textInput"
+      value="FLASHER-ESP32"
+      readonly>
+
+    </div>
+
+
+
+    <button 
+    class="btn"
+    onclick="connectBLE()">
+
+      Connect Bluetooth
+
+    </button>
+
+
+
+    <button 
+    class="btn danger"
+    onclick="disconnectBLE()">
+
+      Disconnect Bluetooth
+
+    </button>
+
+
+
+    <div class="status">
+      BLE Controller Ready
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<script>
+
+function updateBLEStatus(text){
+
+    let el =
+    document.getElementById("bleStatus");
+
+    if(el){
+        el.innerText = text;
+    }
+
+}
+
+
+</script>
+
+
+</body>
+</html>

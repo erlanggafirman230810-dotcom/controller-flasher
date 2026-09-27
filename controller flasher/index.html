@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Flasher Controller</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="title">
+FLASHER CONTROLLER
+</div>
+
+
+<div class="card">
+
+<div class="tabs">
+
+<a class="tab active" href="index.html">
+Flasher
+</a>
+
+<a class="tab" href="settings.html">
+Settings
+</a>
+
+</div>
+
+
+<div class="sectionTitle">
+Mode Kedip
+</div>
+
+
+<div class="grid">
+
+<button id="btn_normal" class="modeBtn"
+onclick="setMode('normal')">
+Normal
+</button>
+
+<button id="btn_konslet" class="modeBtn"
+onclick="setMode('konslet')">
+⚡ Konslet
+</button>
+
+<button id="btn_genit" class="modeBtn"
+onclick="setMode('genit')">
+✨ Genit
+</button>
+
+<button id="btn_blitz" class="modeBtn"
+onclick="setMode('blitz')">
+✈️ Blitz
+</button>
+
+<button id="btn_pulse" class="modeBtn"
+onclick="setMode('pulse')">
+💓 Pulse
+</button>
+
+<button id="btn_drumband" class="modeBtn"
+onclick="setMode('drumband')">
+🥁 Drumband
+</button>
+
+<button id="btn_pramuka" class="modeBtn"
+onclick="setMode('pramuka')">
+⚜️ Pramuka
+</button>
+
+<button id="btn_jedag" class="modeBtn"
+onclick="setMode('jedag')">
+💥 Jedag Jedug
+</button>
+
+</div>
+
+
+
+<div class="speedBox">
+
+<div class="speedTop">
+<span>Kontrol Kecepatan</span>
+<span id="speedText">50%</span>
+</div>
+
+<input id="speedSlider"
+type="range"
+min="1"
+max="100"
+value="50"
+oninput="setSpeed(this.value)">
+
+</div>
+
+
+
+<div class="speedBox" id="genitBox">
+
+<div class="speedTop">
+<span>Banyak Kedipan Genit</span>
+<span id="genitBlinkText">1x</span>
+</div>
+
+<input type="range"
+min="1"
+max="20"
+value="1"
+oninput="setGenitBlink(this.value)">
+
+</div>
+
+
+
+<div class="status">
+
+Mode aktif :
+<span id="modeText">-</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
